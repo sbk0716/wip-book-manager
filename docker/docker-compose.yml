@@ -2,6 +2,7 @@ version: '3'
 services:
   # MySQL
   db:
+    platform: linux/x86_64 # for Apple silicon
     image: mysql:8.0.22
     ports:
       - "3306:3306"
@@ -15,6 +16,7 @@ services:
       - ./db/sql:/docker-entrypoint-initdb.d
   # Redis
   redis:
+    platform: linux/x86_64 # for Apple silicon
     image: "redis:latest"
     ports:
       - "6379:6379"
