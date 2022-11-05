@@ -1,9 +1,9 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 // Configures the plugin dependencies for this project.
-// "org.springframework.boot"のVersionは2.7以上だとmybatisGeneratorが認識されない。
+// GradleのVersionが7系だとmbGeneratorが認識されない。
 plugins {
-	id("org.springframework.boot") version "2.6.13"
+	id("org.springframework.boot") version "2.7.5"
 	id("io.spring.dependency-management") version "1.0.15.RELEASE"
 	id("com.arenagod.gradle.MybatisGenerator") version "1.4" // ADD: Mybatis Gradle Generator Plugin
 	kotlin("jvm") version "1.6.21"
@@ -42,7 +42,7 @@ tasks.withType<Test> {
 	useJUnitPlatform()
 }
 
-
+// Configures the mybatisGenerator extension.
 mybatisGenerator {
 	verbose = true
 	configFile = "${projectDir}/src/main/resources/generatorConfig.xml"

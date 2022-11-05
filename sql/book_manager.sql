@@ -23,6 +23,28 @@ CREATE TABLE rental (
     PRIMARY KEY (book_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO book values(100, 'kotlin入門', 'コトリン太郎', '1950-10-01'), (200, 'java入門', 'ジャバ太郎', '2005-08-29');
+INSERT INTO book values(
+    100,
+    'kotlin入門',
+    'コトリン太郎',
+    '1950-10-01'
+), (
+    200,
+    'java入門',
+    'ジャバ太郎',
+    '2005-08-29'
+);
 
-INSERT INTO user values(1, 'admin@test.com', '$2y$05$dKLxqxq8cBj3wYGciicTdOR6zhfHiG3IEYreqyxkfFPU.Qq5w4KKS', '管理者', 'ADMIN'), (2, 'user@test.com', '$2y$05$dKLxqxq8cBj3wYGciicTdOR6zhfHiG3IEYreqyxkfFPU.Qq5w4KKS', 'ユーザー', 'USER');
+INSERT INTO user values(
+    1,
+    'admin@test.com',
+    '$2y$05$dKLxqxq8cBj3wYGciicTdOR6zhfHiG3IEYreqyxkfFPU.Qq5w4KKS',
+    '管理者',
+    'ADMIN'
+), (
+    2,
+    'user@test.com',
+    '$2y$05$dKLxqxq8cBj3wYGciicTdOR6zhfHiG3IEYreqyxkfFPU.Qq5w4KKS',
+    'ユーザー',
+    'USER'
+);

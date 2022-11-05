@@ -3,7 +3,7 @@
     MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
-    <!-- mysql-connector-javaのPathを各自の環境に合わせて変更する。 -->
+    <!-- mysql-connector-javaのJARのPathを設定する。 -->
     <classPathEntry
             location="/Users/admin/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/8.0.30/b26dd6e4e917d3d4726c34d09d2fd67df7c1dd37/mysql-connector-java-8.0.30.jar"/>
     <!-- MyBatis3Kotlin: https://mybatis.org/generator/quickstart.html#target-runtime-information-and-samples -->
@@ -17,7 +17,7 @@
                 connectionURL="jdbc:mysql://127.0.0.1:3306/book_manager"
                 userId="root"
                 password="mysql">
-            <!-- 不要なCodeのGenerateを防ぐ。 -->
+            <!-- MybatisGeneratorによる不要なCodeのGenerateを防ぐ。 -->
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
         <javaTypeResolver>
@@ -33,7 +33,7 @@
         </javaClientGenerator>
         <!-- Wildcard(%)により全TableをTargetにする。 -->
         <table tableName="%">
-            <!-- typeHandlerにEnumTypeHandlerを指定し、role_typeというcolumnのValueをEnumのClass(RoleType)と紐付ける。 -->
+            <!-- typeHandlerにEnumTypeHandlerを指定することで、Column(role_type)のValueとRoleType Class(Enum)を紐付ける。 -->
             <columnOverride column="role_type" typeHandler="org.apache.ibatis.type.EnumTypeHandler"
                             javaType="com.book.manager.domain.enum.RoleType"/>
         </table>
