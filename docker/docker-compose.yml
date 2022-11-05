@@ -3,7 +3,7 @@ services:
   # MySQL
   db:
     platform: linux/x86_64 # for Apple silicon
-    image: mysql:8.0.22
+    image: "mysql:latest"
     ports:
       - "3306:3306"
     container_name: mysql_host
