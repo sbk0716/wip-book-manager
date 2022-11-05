@@ -3,6 +3,7 @@
     MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
+    <!-- classPathEntry: The classPathEntry element is used to add the JDBC driver to the run-time classpath. -->
     <!-- mysql-connector-javaのJARのPathを設定する。 -->
     <classPathEntry
             location="/Users/admin/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/8.0.30/b26dd6e4e917d3d4726c34d09d2fd67df7c1dd37/mysql-connector-java-8.0.30.jar"/>
