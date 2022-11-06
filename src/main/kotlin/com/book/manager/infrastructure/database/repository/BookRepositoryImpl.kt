@@ -18,9 +18,8 @@ import java.time.LocalDate
 
 /**
  * BookRepositoryImpl Class
- * BookRepository(Interface)でBookRepositoryImplを実装し、DB関連実装をBookRepositoryImplに閉じ込める。
- * ORMの仕様に依存するBookWithRentalRecord(Class)ではなく、BookWithRental(Class)にConvertして返す。
- * -> 仮にORMやRDBに変更があっても、BookRepositoryImplだけ改修すれば済む。
+ * Interface(XxxxRepository)で実装したClass(XxxxImpl)内にDB関連実装を閉じ込める。
+ * ORMに依存するClass(Record)ではなく、ORMに依存しないClass(Model)にConvertして返す。
  */
 @Suppress("SpringJavaInjectionPointsAutowiringInspection")
 @Repository
