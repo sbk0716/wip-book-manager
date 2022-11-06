@@ -57,7 +57,8 @@ class BookRepositoryImpl(
 
     /**
      * toModel() function
-     * convert BookWithRentalRecordClass(Record) to BookWithRentalClass(Model)
+     * ORMに依存するClass(Record)ではなく、ORMに依存しないClass(Model)にConvertして返す。
+     * BookWithRentalRecord(Record) -> BookWithRental(Model)
      */
     private fun toModel(record: BookWithRentalRecord): BookWithRental {
         val book = Book(
