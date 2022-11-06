@@ -10,7 +10,7 @@ import org.apache.ibatis.type.JdbcType
 import org.mybatis.dynamic.sql.select.render.SelectStatementProvider
 import org.mybatis.dynamic.sql.util.SqlProviderAdapter
 
-/*
+/**
  * BookWithRentalMapper Interface
  * book tableとrental tableをJOINした結果を格納するためのMyBatis MapperをDefineする
  */

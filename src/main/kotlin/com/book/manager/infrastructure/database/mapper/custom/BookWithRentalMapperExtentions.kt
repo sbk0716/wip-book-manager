@@ -25,14 +25,19 @@ private val columnList = listOf(
     returnDeadline
 )
 
+/**
+ * BookWithRentalMapper.select() function
+ * 1. define selectStatement
+ * 2. execute selectMany() function with selectStatement
+ */
 fun BookWithRentalMapper.select(): List<BookWithRentalRecord> {
-    // define selectStatement
+    // 1. define selectStatement
     val selectStatement = select(columnList).from(Book, "b") {
         leftJoin(Rental, "r") {
             on(Book.id, equalTo(Rental.bookId))
         }
     }
-    // execute selectMany() function with selectStatement
+    // 2. execute selectMany() function with selectStatement
     val selectStatementResult = selectMany(selectStatement)
     return selectStatementResult
 }
