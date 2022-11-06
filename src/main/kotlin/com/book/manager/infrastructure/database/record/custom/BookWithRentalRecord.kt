@@ -1,5 +1,4 @@
 /*
- * [MANUAL]
  * BookWithRentalRecord Class
  * book tableとrental tableをJOINした結果を格納するためのClassをDefineする
  */
